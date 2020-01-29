@@ -7,7 +7,7 @@ class RadioBtn extends Component {
         <b className="radio-title">{this.props.btnTitle}</b>
         <input
           type="radio"
-          name={this.props.radioBtn}
+          name="radio-btn"
           id="radio-btn"
           value={this.props.btnTitle}
           checked={this.props.check}

@@ -1,6 +1,3 @@
-import Title from './Title';
-import Info from './Info';
-import tick from './Image/tick.png';
 import hospital from './Image/hospital.png';
 import scissor from './Image/Scissors.png';
 import heart from './Image/heart.png';

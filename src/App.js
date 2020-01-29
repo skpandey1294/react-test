@@ -1,50 +1,24 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Question from './Question';
-import RadioBtn from './RadioBtn';
+import RadioBtnCltn from './RadioCollection';
 import Card from './Card';
 import './App.css';
-import data from './Data';
+import dataValue from './Data';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: data.BasicValue,
-      value: 'Basic'
+      data: dataValue.BasicValue
     };
   }
 
-  checkedBtn = async(event) => {
-    let temp;
-
-    if (event.target.value === 'Advance') {
-      temp = data.AdvanceValue;
-      console.log(temp);
-    } else {
-      if (event.target.value === 'Superior') {
-        temp = data.SuperiorValue;
-      } else {
-        temp = data.BasicValue;
-      }
-    }
-
-    console.log(temp);
-
+  setStateData = value => {
     this.setState({
-      data: { temp },
-      value: event.target.value
+      data: value
     });
-    console.log(this.state);
-    console.log(this.state.value);
   };
-
-  // setStateData = value => {
-  //   this.setState({
-  //     data: value
-  //   });
-  //   console.log(this.state.data);
-  // };
 
   render() {
     return (
@@ -55,26 +29,8 @@ class App extends Component {
             'We have 3 policies for you to choose from - which best suits your needs?'
           }
         />
-        {/* <RadioBtnCltn stateData={this.setStateData} />
-         */}
-
-        <RadioBtn
-          btnTitle={'Basic'}
-          check={this.state.value === 'Basic'}
-          getValue={this.checkedBtn}
-        />
-        <RadioBtn
-          btnTitle={'Advance'}
-          check={this.state.value === 'Advance'}
-          getValue={this.checkedBtn}
-        />
-        <RadioBtn
-          btnTitle={'Superior'}
-          check={this.state.value === 'Superior'}
-          getValue={this.checkedBtn}
-        />
-
-        <Card Value={this.state.data} />
+        <RadioBtnCltn stateData={this.setStateData} />
+        {/* <Card Value={this.state.data} /> */}
       </div>
     );
   }

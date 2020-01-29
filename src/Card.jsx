@@ -3,12 +3,7 @@ import Description from './Description';
 import Title from './Title';
 import Info from './Info';
 import tick from './Image/tick.png';
-import hospital from './Image/hospital.png';
-import scissor from './Image/Scissors.png';
-import heart from './Image/heart.png';
-import disable from './Image/disable.png';
-import tooth from './Image/tooth.png';
-import stethoscope from './Image/stethoscope .png';
+import equal from 'fast-deep-equal';
 
 class Card extends Component {
   constructor(props) {
@@ -17,7 +12,14 @@ class Card extends Component {
       values: props.Value
     };
     console.log(this.state.values);
-    // console.log(props.value);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!equal(this.props.Value, prevProps.Value)) {
+      this.setState({
+        values: this.props.Value
+      });
+    }
   }
 
   render() {
@@ -47,57 +49,10 @@ class Card extends Component {
           <br></br>
           <b>Health</b>
         </div>
-        <div className="grid-container">
-          {/* <Description
-            className="grid-item"
-            paragraph={'What you pay'}
-            heading={'VND 800 ngan'}
-          />
-          <Description
-            className="grid-item"
-            paragraph={'Protection amount'}
-            heading={'VND 80 trieu'}
-          />
-          <Description
-            className="grid-item"
-            paragraph={'Insurer'}
-            heading={'Bao Minh Corporation'}
-          />
-          <Description
-            className="grid-item"
-            paragraph={'Amount of time you are covered'}
-            heading={'1 year'}
-          /> */}
-          {descr}
-        </div>
+        <div className="grid-container">{descr}</div>
         <hr />
         <div className="flex-container">
           <Title className="flex-item" img={tick} heading={"What's included"} />
-          {/* <Info
-            className="flex-item"
-            img={hospital}
-            heading={'Hospital costs'}
-            paragraph={`VND 2 million/ day, max. of VND 80 million`}
-          />
-          <Info
-            className="flex-item"
-            img={scissor}
-            heading={'Surgery costs'}
-            paragraph={`VND 40 million/ year`}
-          />
-
-          <Info
-            className="flex-item"
-            img={heart}
-            heading={'Money in case of death'}
-            paragraph={`Max. of VND 80 million`}
-          />
-          <Info
-            className="flex-item"
-            img={disable}
-            heading={`Money in case total disability`}
-            paragraph={`Max. of VND 80 million`}
-          /> */}
 
           {info}
         </div>

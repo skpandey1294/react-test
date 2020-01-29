@@ -134,4 +134,10 @@ a {
   height: 30px;
   width: 30px;
   border: steelblue 1px solid;
+  z-index: 0;
+}
+
+.radio-title {
+  z-index: 0;
+  color: white;
 }
