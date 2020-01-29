@@ -15,7 +15,8 @@ class RadioBtnCltn extends Component {
         backgroundColor: '#5bbeec',
         position: 'absolute',
         left: 30,
-        borderBottomRightRadius: 52
+        borderBottomRightRadius: 52,
+        borderTopLeftRadius: 20
       }
     };
   }

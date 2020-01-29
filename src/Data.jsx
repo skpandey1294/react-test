@@ -88,8 +88,8 @@ let data = {
 
   SuperiorValue: {
     description: [
-      { paragraph: 'What you pay', heading: 'VND 1.1 trieu' },
-      { paragraph: 'Protection amount', heading: 'VND 100 trieu' },
+      { paragraph: 'What you pay', heading: 'VND 1.2 trieu' },
+      { paragraph: 'Protection amount', heading: 'VND 120 trieu' },
       { paragraph: 'Insurer', heading: 'Bao Minh Corporation' },
       { paragraph: 'Amount of time you are covered', heading: '1 year' }
     ],

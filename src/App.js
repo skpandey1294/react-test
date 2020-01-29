@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Question from './Question';
 import RadioBtnCltn from './RadioCollection';
-import Card from './Card';
 import './App.css';
 import dataValue from './Data';
 
