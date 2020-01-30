@@ -4,12 +4,14 @@ import Title from './Title';
 import Info from './Info';
 import tick from './Image/tick.png';
 import equal from 'fast-deep-equal';
+import BetterProtection from './BetterProtection.jsx';
 
 class Card extends Component {
   constructor(props) {
     super();
     this.state = {
-      values: props.Value
+      values: props.Value,
+      stateValue: props.val
     };
     console.log(this.state.values);
   }
@@ -17,12 +19,19 @@ class Card extends Component {
   componentDidUpdate(prevProps) {
     if (!equal(this.props.Value, prevProps.Value)) {
       this.setState({
-        values: this.props.Value
+        values: this.props.Value,
+        stateValue: this.props.val
       });
     }
   }
 
   render() {
+    let styles = {};
+    if (this.state.stateValue === 'Basic') {
+      styles = { display: 'none' };
+    } else {
+      styles = { display: 'block' };
+    }
     let descr = this.state.values.description.map(currDescription => (
       <Description
         key={currDescription.heading}
@@ -39,6 +48,8 @@ class Card extends Component {
         img={currInfo.img}
         heading={currInfo.heading}
         paragraph={currInfo.paragraph}
+        arrow={currInfo.arrow}
+        stateValue={this.state.stateValue}
       />
     ));
 
@@ -51,6 +62,9 @@ class Card extends Component {
         </div>
         <div className="grid-container">{descr}</div>
         <hr />
+        <div style={styles}>
+          <BetterProtection />
+        </div>
         <div className="flex-container">
           <Title className="flex-item" img={tick} heading={"What's included"} />
 

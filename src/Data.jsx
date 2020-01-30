@@ -4,6 +4,7 @@ import heart from './Image/heart.png';
 import disable from './Image/disable.png';
 import tooth from './Image/tooth.png';
 import stethoscope from './Image/stethoscope .png';
+import arrow from './Image/greenArrow.png';
 
 let data = {
   BasicValue: {
@@ -51,13 +52,15 @@ let data = {
       {
         img: hospital,
         heading: 'Hospital costs',
-        paragraph: `VND 3 million/ day, max. of VND 100 million`
+        paragraph: `VND 3 million/ day, max. of VND 100 million`,
+        arrow: arrow
       },
 
       {
         img: scissor,
         heading: 'Surgery costs',
-        paragraph: `VND 50 million/ year`
+        paragraph: `VND 50 million/ year`,
+        arrow: arrow
       },
 
       {
@@ -69,19 +72,22 @@ let data = {
       {
         img: disable,
         heading: `Money in case total disability`,
-        paragraph: `Max. of VND 100 million`
+        paragraph: `Max. of VND 100 million`,
+        arrow: arrow
       },
 
       {
         img: disable,
         heading: `Money in case of partial disability`,
-        paragraph: `Max. of VND 50 million`
+        paragraph: `Max. of VND 50 million`,
+        arrow: arrow
       },
 
       {
         img: stethoscope,
         heading: `Doctor visit costs`,
-        paragraph: `VND 3 million / year`
+        paragraph: `VND 3 million / year`,
+        arrow: arrow
       }
     ]
   },
@@ -97,13 +103,15 @@ let data = {
       {
         img: hospital,
         heading: 'Hospital costs',
-        paragraph: `VND 3 million/ day, max. of VND 100 million`
+        paragraph: `VND 4 million/ day, max. of VND 100 million`,
+        arrow: arrow
       },
 
       {
         img: scissor,
         heading: 'Surgery costs',
-        paragraph: `VND 50 million/ year`
+        paragraph: `VND 60 million/ year`,
+        arrow: arrow
       },
 
       {
@@ -115,25 +123,29 @@ let data = {
       {
         img: disable,
         heading: `Money in case total disability`,
-        paragraph: `Max. of VND 100 million`
+        paragraph: `Max. of VND 100 million`,
+        arrow: arrow
       },
 
       {
         img: disable,
         heading: `Money in case of partial disability`,
-        paragraph: `Max. of VND 50 million`
+        paragraph: `Max. of VND 50 million`,
+        arrow: arrow
       },
 
       {
         img: stethoscope,
         heading: `Doctor visit costs`,
-        paragraph: `VND 3 million / year`
+        paragraph: `VND 3 million / year`,
+        arrow: arrow
       },
 
       {
         img: tooth,
         heading: `Dentist visit costs`,
-        paragraph: `VND 2 million / year`
+        paragraph: `VND 2 million / year`,
+        arrow: arrow
       }
     ]
   }

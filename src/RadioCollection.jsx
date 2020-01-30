@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import RadioBtn from './RadioBtn';
 import Card from './Card';
 import data from './Data';
+import radioButton from './Image/circle.png';
 
 class RadioBtnCltn extends Component {
   constructor() {
@@ -10,13 +11,35 @@ class RadioBtnCltn extends Component {
       value: 'Basic',
       dataValue: data.BasicValue,
       styles: {
-        height: 150,
+        height: 155,
         width: 125.9,
         backgroundColor: '#5bbeec',
         position: 'absolute',
         left: 30,
-        borderBottomRightRadius: 52,
+        top: 250,
+        borderBottomRightRadius: 35,
         borderTopLeftRadius: 20
+      },
+      circleStyle: {
+        height: 45,
+        width: 40,
+        backgroundColor: '#5bbeec',
+        position: 'absolute',
+        left: 70,
+        top: 320
+      },
+      innerStyle: {
+        position: 'absolute',
+        height: 10,
+        width: 12,
+        top: 0,
+        left: 115,
+        borderRadius: '50%',
+        display: 'inline-block',
+        marginLeft: 6.4,
+        borderTopLeftRadius: 14,
+        borderTopRightRadius: 14,
+        backgroundColor: '#5bbeec'
       }
     };
   }
@@ -28,12 +51,35 @@ class RadioBtnCltn extends Component {
       this.setState({
         dataValue: data.AdvanceValue,
         styles: {
-          height: 150,
+          height: 160,
           width: 125.9,
           backgroundColor: '#F4C901',
           position: 'absolute',
           left: 156,
-          borderBottomRightRadius: 52
+          top: 252,
+          borderTopLeftRadius: 15,
+          borderBottomRightRadius: 35
+        },
+        circleStyle: {
+          height: 40,
+          width: 40,
+          backgroundColor: '#F4C901',
+          position: 'absolute',
+          left: 196,
+          top: 320
+        },
+        innerStyle: {
+          position: 'absolute',
+          height: 10,
+          width: 12,
+          top: 0,
+          left: 115,
+          borderRadius: '50%',
+          display: 'inline-block',
+          marginLeft: 6.4,
+          borderTopLeftRadius: 14,
+          borderTopRightRadius: 14,
+          backgroundColor: '#F4C901       '
         }
       });
     } else {
@@ -41,24 +87,71 @@ class RadioBtnCltn extends Component {
         this.setState({
           dataValue: data.SuperiorValue,
           styles: {
-            height: 150,
+            height: 160,
             width: 125.9,
             backgroundColor: '#11B641',
             position: 'absolute',
             left: 284,
-            borderBottomRightRadius: 52
+            top: 252,
+            borderBottomRightRadius: 35,
+            borderTopLeftRadius: 15
+          },
+
+          circleStyle: {
+            height: 40,
+            width: 40,
+            backgroundColor: '#11B641',
+            position: 'absolute',
+            left: 322,
+            top: 320
+          },
+          innerStyle: {
+            position: 'absolute',
+            height: 30,
+            width: 12,
+            top: 0,
+            left: 115,
+            borderRadius: '50%',
+            display: 'inline-block',
+            marginLeft: 6.4,
+            borderTopLeftRadius: 14,
+            borderTopRightRadius: 14,
+            backgroundColor: '#11B641'
           }
         });
       } else {
         this.setState({
           dataValue: data.BasicValue,
           styles: {
-            height: 150,
+            height: 155,
             width: 125.9,
             backgroundColor: '#5bbeec',
             position: 'absolute',
             left: 30,
-            borderBottomRightRadius: 52
+            top: 252,
+            borderBottomRightRadius: 35,
+            borderTopLeftRadius: 15
+          },
+          circleStyle: {
+            height: 40,
+            width: 40,
+            backgroundColor: '#5bbeec',
+            position: 'absolute',
+            left: 70,
+            top: 320
+          },
+          innerStyle: {
+            position: 'absolute',
+            height: 10,
+            width: 12,
+            top: 0,
+            left: 115,
+            borderRadius: '50%',
+            display: 'inline-block',
+            marginLeft: 6.4,
+            borderTopLeftRadius: 14,
+            borderTopRightRadius: 14,
+            backgroundColor: '#5bbeec'
           }
         });
       }
@@ -68,7 +161,15 @@ class RadioBtnCltn extends Component {
     return (
       <div>
         <div className="radio-btn-cltn">
-          <div style={this.state.styles}></div>
+          <div style={this.state.styles}>
+            <div className="inner-z" style={this.state.innerStyle}></div>
+          </div>
+          <img
+            src={radioButton}
+            alt="radio"
+            id="circle"
+            style={this.state.circleStyle}
+          />
           <RadioBtn
             btnTitle={'Basic'}
             check={this.state.value === 'Basic'}
@@ -87,7 +188,7 @@ class RadioBtnCltn extends Component {
             getValue={this.checkedBtn}
           />
         </div>
-        <Card Value={this.state.dataValue} />
+        <Card Value={this.state.dataValue} val={this.state.value} />
       </div>
     );
   }
