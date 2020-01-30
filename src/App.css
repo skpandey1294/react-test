@@ -126,7 +126,7 @@ a {
   width: 125.9px;
   background-color: #e8e2e2;
   text-align: center;
-  /* border-right: 1px white solid; */
+  border-right: 1px white solid;
 }
 
 .radio-btn-cltn {

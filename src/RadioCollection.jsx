@@ -3,12 +3,14 @@ import RadioBtn from './RadioBtn';
 import Card from './Card';
 import data from './Data';
 import radioButton from './Image/circle.png';
+import Question from './Question';
 
 class RadioBtnCltn extends Component {
   constructor() {
     super();
     this.state = {
       value: 'Basic',
+      question: data.BasicValue.question,
       dataValue: data.BasicValue,
       styles: {
         height: 155,
@@ -49,6 +51,7 @@ class RadioBtnCltn extends Component {
     });
     if (event.target.value === 'Advance') {
       this.setState({
+        question: data.AdvanceValue.question,
         dataValue: data.AdvanceValue,
         styles: {
           height: 160,
@@ -85,6 +88,7 @@ class RadioBtnCltn extends Component {
     } else {
       if (event.target.value === 'Superior') {
         this.setState({
+          question: data.SuperiorValue.question,
           dataValue: data.SuperiorValue,
           styles: {
             height: 160,
@@ -121,6 +125,7 @@ class RadioBtnCltn extends Component {
         });
       } else {
         this.setState({
+          question: data.BasicValue.question,
           dataValue: data.BasicValue,
           styles: {
             height: 155,
@@ -160,6 +165,7 @@ class RadioBtnCltn extends Component {
   render() {
     return (
       <div>
+        <Question question={this.state.question} />
         <div className="radio-btn-cltn">
           <div style={this.state.styles}>
             <div className="inner-z" style={this.state.innerStyle}></div>

@@ -8,6 +8,8 @@ import arrow from './Image/greenArrow.png';
 
 let data = {
   BasicValue: {
+    question:
+      'We have 3 policies for you to choose from - which best suits your needs?',
     description: [
       { paragraph: 'What you pay', heading: 'VND 800 ngan' },
       { paragraph: 'Protection amount', heading: 'VND 80 trieu' },
@@ -42,6 +44,8 @@ let data = {
   },
 
   AdvanceValue: {
+    question:
+      'We think this policy might suit you best-through do choose another if you prefer that',
     description: [
       { paragraph: 'What you pay', heading: 'VND 1.1 trieu' },
       { paragraph: 'Protection amount', heading: 'VND 100 trieu' },
@@ -93,6 +97,8 @@ let data = {
   },
 
   SuperiorValue: {
+    question:
+      'We have 3 policies for you to choose from - which best suits your needs?',
     description: [
       { paragraph: 'What you pay', heading: 'VND 1.2 trieu' },
       { paragraph: 'Protection amount', heading: 'VND 120 trieu' },
