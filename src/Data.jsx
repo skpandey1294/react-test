@@ -11,8 +11,8 @@ let data = {
     question:
       'We have 3 policies for you to choose from - which best suits your needs?',
     description: [
-      { paragraph: 'What you pay', heading: 'VND 800 ngan' },
-      { paragraph: 'Protection amount', heading: 'VND 80 trieu' },
+      { paragraph: 'What you pay', heading: 'VND 800 ngàn' },
+      { paragraph: 'Protection amount', heading: 'VND 80 triêu' },
       { paragraph: 'Insurer', heading: 'Bao Minh Corporation' },
       { paragraph: 'Amount of time you are covered', heading: '1 year' }
     ],
@@ -47,8 +47,8 @@ let data = {
     question:
       'We think this policy might suit you best-through do choose another if you prefer that',
     description: [
-      { paragraph: 'What you pay', heading: 'VND 1.1 trieu' },
-      { paragraph: 'Protection amount', heading: 'VND 100 trieu' },
+      { paragraph: 'What you pay', heading: 'VND 1.1 triêu' },
+      { paragraph: 'Protection amount', heading: 'VND 100 triêu' },
       { paragraph: 'Insurer', heading: 'Bao Minh Corporation' },
       { paragraph: 'Amount of time you are covered', heading: '1 year' }
     ],
@@ -100,8 +100,8 @@ let data = {
     question:
       'We have 3 policies for you to choose from - which best suits your needs?',
     description: [
-      { paragraph: 'What you pay', heading: 'VND 1.2 trieu' },
-      { paragraph: 'Protection amount', heading: 'VND 120 trieu' },
+      { paragraph: 'What you pay', heading: 'VND 1.2 triêu' },
+      { paragraph: 'Protection amount', heading: 'VND 120 triêu' },
       { paragraph: 'Insurer', heading: 'Bao Minh Corporation' },
       { paragraph: 'Amount of time you are covered', heading: '1 year' }
     ],
